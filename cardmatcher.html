@@ -1,0 +1,55 @@
+
+<DOCTYPE html>
+<html>
+<head>
+  <script src="cardmatcher.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Concentration</title>
+</head>
+<body>
+    <div class="game-info-container">
+
+        <div class="section">
+          <div id="game-state-info">
+              Choose an even number and click submit.
+          </div>
+        </div>
+
+        <div class="section">
+          Num guesses:
+          <div id="game-state-info">
+          </div>
+        </div>
+
+        <div class="section">
+          Matched cards:
+          <div id="game-state-info">
+          </div>
+        </div>
+
+        <div class="section">
+          Total cards:
+          <div id="game-state-info">
+          </div>
+        </div>
+
+    </div>
+
+    <div class="form-container">
+      <form>
+        <label for="grid-size">Grid Size</label>
+        <br>
+        <input type="text" name="grid-size" id="grid-size">
+        <br>
+        <input type="submit" id="grid-size-button" value="Pick a size">
+        <br>
+      </form>
+    </div>
+
+    <div class="grid-container">
+        <div id="matcher-grid">
+        </div>
+    </div>
+
+</body>
+</html>
