@@ -19,7 +19,7 @@ matcherView = {
       var $cardDiv = $("<div><div class='name'>"  + card.value + "</div></div>");
       $cardDiv.addClass("card");
       $cardDiv.data('card-id', card.id);
-      $cardDiv.attr( "id", "card" + card.id );
+      $cardDiv.attr( "id", "card-" + card.id );
       this.$grid.append($cardDiv);
     }
       
@@ -31,8 +31,22 @@ matcherView = {
     });
   },
     
+  revealCard: function( id ) {
+    $("#card-"+id).addClass('revealed');
+  },
+
+  setCorrect: function( id ) {
+    $("#card-"+id).addClass('correct');
+  },
+    
+  hideCards: function(  ) {
+    $(".card").not('.correct').removeClass('revealed');
+  },
 
   updateGameView: function(  ) {
-    
+    $('#game-state-info').text( this.model.gameStateText );
+    $('#num-guesses').text( this.model.numGuesses );
+    $('#matched-cards').text( this.model.matchedCards );
+    $('#total-cards').text( this.model.totalCards );
   },
 };
