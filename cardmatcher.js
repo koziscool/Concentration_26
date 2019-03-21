@@ -7,7 +7,6 @@ $(document).ready( function() {
     e.preventDefault();
     var size = $("#grid-size").val();
     if( Math.floor( size / 2) === size / 2 ) {
-      console.log('tetris');
       matcherController.init(size);
       matcherView.updateGameView();
       $("#grid-size-form").hide();

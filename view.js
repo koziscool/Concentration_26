@@ -24,6 +24,12 @@ matcherView = {
     }
       
   },
+  
+  addClickHandlers: function( fn, context ) {
+    $(".card").click( function(){
+      fn.call( context, $(this).data('card-id') );
+    });
+  },
     
 
   updateGameView: function(  ) {
